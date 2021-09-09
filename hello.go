@@ -150,38 +150,51 @@ func main() {
 		var temp [2][3]int = addMatrix(matrix, matrix2)
 		fmt.Println(temp)
 	*/
+	/*
+		// Slices
 
-	// Slices
+		my_name := make([]string, 5)
+		some_extras := make([]string, 3)
+		some_extras[0] = "C"
+		some_extras[1] = "C++"
+		some_extras[2] = "Java"
 
-	my_name := make([]string, 5)
-	some_extras := make([]string, 3)
-	some_extras[0] = "C"
-	some_extras[1] = "C++"
-	some_extras[2] = "Java"
+		fmt.Println(my_name)
+		fmt.Println("The length of my_slice is : ", len(my_name))
+		my_name[4] = "n"
+		my_name[3] = "a"
+		my_name[2] = "m"
+		my_name[1] = "u"
+		my_name[0] = "S"
 
-	fmt.Println(my_name)
-	fmt.Println("The length of my_slice is : ", len(my_name))
-	my_name[4] = "n"
-	my_name[3] = "a"
-	my_name[2] = "m"
-	my_name[1] = "u"
-	my_name[0] = "S"
+		my_name = append(my_name, " ", "D", "e")
 
-	my_name = append(my_name, " ", "D", "e")
+		fmt.Println(my_name)
 
-	fmt.Println(my_name)
+		my_name = append(my_name, some_extras...)
+		fmt.Println(my_name)
 
-	my_name = append(my_name, some_extras...)
-	fmt.Println(my_name)
+		fmt.Println("The length of my_slice is : ", len(my_name))
+		fmt.Println(my_name[:])
+		fmt.Println(my_name[4:8])
+		fmt.Println(my_name[4:])
+		fmt.Println(my_name[:8])
+		fmt.Println()
 
-	fmt.Println("The length of my_slice is : ", len(my_name))
-	fmt.Println(my_name[:])
-	fmt.Println(my_name[4:8])
-	fmt.Println(my_name[4:])
-	fmt.Println(my_name[:8])
+		// Just explore some other functions like copy() etc
+	*/
+	// Map
 
-	// Just explore some other functions like copy() etc
+	laptop_prices := map[string]int{
+		"Hp":   20000,
+		"Dell": 21000,
+	}
+	// add another couple of key-value pairs to laptop_prices
+	laptop_prices["Acer"] = 19000
+	laptop_prices["Apple"] = 50000
+	laptop_prices["Lenovo"] = 25000
 
+	fmt.Println(laptop_prices)
 }
 
 /*
