@@ -115,41 +115,72 @@ func main() {
 
 	*/
 
-	// Arrays
+	/*
+		// Arrays
 
-	var numbers [3]int
-	fmt.Printf("%T \n", numbers)
-	for index, number := range numbers {
-		print("Before : ", index, ":", number, "\n")
-		numbers[index] = index * 10
-		print("After : ", index, ":", numbers[index], "\n")
-	}
-	count, error := fmt.Println(numbers) // Print return number of bites written and an error if any
-	println((count))
-
-	fmt.Println(error) // <nil>
-	print(error, "\n") // (0x0,0x0)>
-
-	another := []int{77, 88, 99}
-	fmt.Println(another)
-
-	var matrix [2][3]int
-	for i := 0; i < 2; i++ {
-		for j := 0; j < 3; j++ {
-			matrix[i][j] = i
+		var numbers [3]int
+		fmt.Printf("%T \n", numbers)
+		for index, number := range numbers {
+			print("Before : ", index, ":", number, "\n")
+			numbers[index] = index * 10
+			print("After : ", index, ":", numbers[index], "\n")
 		}
-	}
-	fmt.Println("Matrix: ", matrix)
+		count, error := fmt.Println(numbers) // Print return number of bites written and an error if any
+		println((count))
 
-	matrix2 := [2][3]int{
-		{1, 5, 9},
-		{1, 2, 3},
-	}
-	fmt.Println("Matrix: ", matrix2)
-	var temp [2][3]int = addMatrix(matrix, matrix2)
-	fmt.Println(temp)
+		fmt.Println(error) // <nil>
+		print(error, "\n") // (0x0,0x0)>
+
+		another := []int{77, 88, 99}
+		fmt.Println(another)
+
+		var matrix [2][3]int
+		for i := 0; i < 2; i++ {
+			for j := 0; j < 3; j++ {
+				matrix[i][j] = i
+			}
+		}
+		fmt.Println("Matrix: ", matrix)
+
+		matrix2 := [2][3]int{
+			{1, 5, 9},
+			{1, 2, 3},
+		}
+		fmt.Println("Matrix: ", matrix2)
+		var temp [2][3]int = addMatrix(matrix, matrix2)
+		fmt.Println(temp)
+	*/
+
+	// Slices
+
+	my_name := make([]string, 5)
+	some_extras := make([]string, 3)
+	some_extras[0] = "C"
+	some_extras[1] = "C++"
+	some_extras[2] = "Java"
+
+	fmt.Println(my_name)
+	fmt.Println("The length of my_slice is : ", len(my_name))
+	my_name[4] = "n"
+	my_name[3] = "a"
+	my_name[2] = "m"
+	my_name[1] = "u"
+	my_name[0] = "S"
+
+	my_name = append(my_name, " ", "D", "e")
+
+	fmt.Println(my_name)
+
+	my_name = append(my_name, some_extras...)
+	fmt.Println(my_name)
+
+	fmt.Println("The length of my_slice is : ", len(my_name))
+
+	// Just explore some other functions like copy() etc
 
 }
+
+/*
 
 // this function will take two two matrix and return another matrix (their sum)
 func addMatrix(mat1 [2][3]int, mat2 [2][3]int) [2][3]int {
@@ -160,4 +191,6 @@ func addMatrix(mat1 [2][3]int, mat2 [2][3]int) [2][3]int {
 		}
 	}
 	return temp
+
 }
+*/
