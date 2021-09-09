@@ -46,52 +46,72 @@ func main() {
 	*/
 
 	// control flow
+	/*
+			number1 := 10
+			number2 := 80
+			var big int
 
-	number1 := 10
-	number2 := 80
-	var big int
+			// if else
+			if number1 > number2 {
+				big = number1
+			} else {
+				big = number2
+			}
 
-	// if else
-	if number1 > number2 {
-		big = number1
-	} else {
-		big = number2
-	}
+			fmt.Printf("The biggest number is : %d \n", big)
+			// switch
+			switch big {
+			case 10:
+				print("The value of big is 10\n")
+			case 20:
+				print("The value of big is 20\n")
+			default:
 
-	fmt.Printf("The biggest number is : %d \n", big)
-	// switch
-	switch big {
-	case 10:
-		print("The value of big is 10\n")
-	case 20:
-		print("The value of big is 20\n")
-	default:
+				print("The value of big is Unknown!\n")
+			}
 
-		print("The value of big is Unknown!\n")
-	}
+			value := 4
+			switch value {
+			case 1, 3, 5, 7, 9:
+				print("Odd\n")
+			case 2, 4, 6, 8, 10:
+				print("Even\n")
+			default:
+				print("Please Enter number between 1 and 10\n")
+			}
 
-	value := 4
-	switch value {
-	case 1, 3, 5, 7, 9:
-		print("Odd\n")
-	case 2, 4, 6, 8, 10:
-		print("Even\n")
-	default:
-		print("Please Enter number between 1 and 10\n")
-	}
+			whatAmI := func(i interface{}) {
+				switch t := i.(type) {
+				case bool:
+					fmt.Println("I'm a bool")
+				case int:
+					fmt.Println("I'm an int")
+				default:
+					fmt.Printf("Don't know type %T\n", t)
+				}
+			}
+			whatAmI(true)
+			whatAmI(1)
+			whatAmI("hey")
 
-	whatAmI := func(i interface{}) {
-		switch t := i.(type) {
-		case bool:
-			fmt.Println("I'm a bool")
-		case int:
-			fmt.Println("I'm an int")
-		default:
-			fmt.Printf("Don't know type %T\n", t)
+
+		// for loop
+		i := 1
+		for i <= 3 {
+			println(i)
+			i++
 		}
-	}
-	whatAmI(true)
-	whatAmI(1)
-	whatAmI("hey")
 
+		for i := 0; i < 10; i++ {
+			print(i, " ")
+		}
+
+		// infinity loop
+		for {
+			print("I'm infinite")
+		}
+
+		// break and continue are same as C
+
+	*/
 }
