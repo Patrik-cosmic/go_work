@@ -146,6 +146,18 @@ func main() {
 		{1, 2, 3},
 	}
 	fmt.Println("Matrix: ", matrix2)
+	var temp [2][3]int = addMatrix(matrix, matrix2)
+	fmt.Println(temp)
 
-	//fmt.Println(matrix + matrix2) // have to do this after some time
+}
+
+// this function will take two two matrix and return another matrix (their sum)
+func addMatrix(mat1 [2][3]int, mat2 [2][3]int) [2][3]int {
+	var temp [2][3]int
+	for i := 0; i < 2; i++ {
+		for j := 0; j < 3; j++ {
+			temp[i][j] = mat1[i][j] + mat2[i][j]
+		}
+	}
+	return temp
 }
