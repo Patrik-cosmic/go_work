@@ -34,5 +34,5 @@ func main() {
 	fmt.Printf("The number is %d \n", number)
 	// another way
 	fmt.Printf("The number is %v \n", number)
-	print("Hi")
+	print("The number is %v \n", number)
 }
