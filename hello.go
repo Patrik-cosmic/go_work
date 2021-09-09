@@ -184,7 +184,20 @@ func main() {
 		// Just explore some other functions like copy() etc
 	*/
 	// Map
+	/*
+		// To create an empty map, use the builtin `make`:
+		// `make(map[key-type]val-type)`.
+		m := make(map[string]int)
 
+		// Set key/value pairs using typical `name[key] = val`
+		// syntax.
+		m["k1"] = 7
+		m["k2"] = 13
+
+		// Printing a map with e.g. `fmt.Println` will show all of
+		// its key/value pairs.
+		fmt.Println("map:", m)
+	*/
 	laptop_prices := map[string]int{
 		"Hp":   20000,
 		"Dell": 21000,
@@ -195,6 +208,17 @@ func main() {
 	laptop_prices["Lenovo"] = 25000
 
 	fmt.Println(laptop_prices)
+
+	numbers := []int{1, 2, 3, 4}
+
+	for index, item := range numbers {
+		fmt.Println(index, ": ", item)
+	}
+
+	for key, value := range laptop_prices {
+		fmt.Println(key, ": ", value)
+	}
+
 }
 
 /*
