@@ -175,6 +175,10 @@ func main() {
 	fmt.Println(my_name)
 
 	fmt.Println("The length of my_slice is : ", len(my_name))
+	fmt.Println(my_name[:])
+	fmt.Println(my_name[4:8])
+	fmt.Println(my_name[4:])
+	fmt.Println(my_name[:8])
 
 	// Just explore some other functions like copy() etc
 
