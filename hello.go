@@ -114,4 +114,38 @@ func main() {
 		// break and continue are same as C
 
 	*/
+
+	// Arrays
+
+	var numbers [3]int
+	fmt.Printf("%T \n", numbers)
+	for index, number := range numbers {
+		print("Before : ", index, ":", number, "\n")
+		numbers[index] = index * 10
+		print("After : ", index, ":", numbers[index], "\n")
+	}
+	count, error := fmt.Println(numbers) // Print return number of bites written and an error if any
+	println((count))
+
+	fmt.Println(error) // <nil>
+	print(error, "\n") // (0x0,0x0)>
+
+	another := []int{77, 88, 99}
+	fmt.Println(another)
+
+	var matrix [2][3]int
+	for i := 0; i < 2; i++ {
+		for j := 0; j < 3; j++ {
+			matrix[i][j] = i
+		}
+	}
+	fmt.Println("Matrix: ", matrix)
+
+	matrix2 := [2][3]int{
+		{1, 5, 9},
+		{1, 2, 3},
+	}
+	fmt.Println("Matrix: ", matrix2)
+
+	//fmt.Println(matrix + matrix2) // have to do this after some time
 }
