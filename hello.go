@@ -198,26 +198,47 @@ func main() {
 		// its key/value pairs.
 		fmt.Println("map:", m)
 	*/
-	laptop_prices := map[string]int{
-		"Hp":   20000,
-		"Dell": 21000,
+	/*
+		laptop_prices := map[string]int{
+			"Hp":   20000,
+			"Dell": 21000,
+		}
+		// add another couple of key-value pairs to laptop_prices
+		laptop_prices["Acer"] = 19000
+		laptop_prices["Apple"] = 50000
+		laptop_prices["Lenovo"] = 25000
+
+		fmt.Println(laptop_prices)
+
+		numbers := []int{1, 2, 3, 4}
+
+		for index, item := range numbers {
+			fmt.Println(index, ": ", item)
+		}
+
+		for key, value := range laptop_prices {
+			fmt.Println(key, ": ", value)
+		}
+	*/
+
+	// structure
+
+	type Info struct {
+		name string
+		age  int
+		tech []string
 	}
-	// add another couple of key-value pairs to laptop_prices
-	laptop_prices["Acer"] = 19000
-	laptop_prices["Apple"] = 50000
-	laptop_prices["Lenovo"] = 25000
 
-	fmt.Println(laptop_prices)
+	//person1_tech := []string{"Python", "Golang"}
 
-	numbers := []int{1, 2, 3, 4}
-
-	for index, item := range numbers {
-		fmt.Println(index, ": ", item)
+	person1 := Info{
+		name: "Suman De",
+		age:  24,
+		// tech: person1_tech,
+		tech: []string{"Python", "Golang"},
 	}
 
-	for key, value := range laptop_prices {
-		fmt.Println(key, ": ", value)
-	}
+	fmt.Println(person1)
 
 }
 
