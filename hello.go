@@ -6,6 +6,19 @@ import (
 	"rsc.io/quote"
 )
 
+type Info struct {
+	name string
+	age  int
+	tech []string
+}
+
+// interfaces
+func (info Info) getTechnology() {
+	for index, tech := range info.tech {
+		fmt.Println(index+1, ": ", tech)
+	}
+}
+
 func main() {
 	fmt.Println("Hello, World!")
 	fmt.Println(quote.Go())
@@ -223,12 +236,6 @@ func main() {
 
 	// structure
 
-	type Info struct {
-		name string
-		age  int
-		tech []string
-	}
-
 	//person1_tech := []string{"Python", "Golang"}
 
 	person1 := Info{
@@ -237,6 +244,9 @@ func main() {
 		// tech: person1_tech,
 		tech: []string{"Python", "Golang"},
 	}
+
+	// interfaces
+	person1.getTechnology()
 
 	fmt.Println(person1)
 
