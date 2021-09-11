@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 
 	"rsc.io/quote"
 )
@@ -253,6 +254,17 @@ func main() {
 	person1.getTechnology()
 
 	fmt.Println(person1)
+	// check the type
+	fmt.Println(reflect.ValueOf(person1).Kind())
+	// or
+	fmt.Println(reflect.ValueOf(Info{}).Kind())
+
+	var an_array [5]int
+	var a_slice []int
+	extra := an_array[:] // convert to slice
+	fmt.Println(reflect.ValueOf(an_array).Kind())
+	fmt.Println(reflect.ValueOf(a_slice).Kind())
+	fmt.Println(reflect.ValueOf(extra).Kind())
 
 }
 
