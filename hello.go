@@ -14,6 +14,10 @@ type Info struct {
 
 // interfaces
 func (info Info) getTechnology() {
+	/*
+		if we use receiver like this (info *Info)
+		this statement " info.tech = append(info.tech, "C") "  will change the original obj as well.
+	*/
 	for index, tech := range info.tech {
 		fmt.Println(index+1, ": ", tech)
 	}
@@ -212,32 +216,32 @@ func main() {
 		fmt.Println("map:", m)
 	*/
 	/*
-		laptop_prices := map[string]int{
-			"Hp":   20000,
-			"Dell": 21000,
-		}
-		// add another couple of key-value pairs to laptop_prices
-		laptop_prices["Acer"] = 19000
-		laptop_prices["Apple"] = 50000
-		laptop_prices["Lenovo"] = 25000
+			laptop_prices := map[string]int{
+				"Hp":   20000,
+				"Dell": 21000,
+			}
+			// add another couple of key-value pairs to laptop_prices
+			laptop_prices["Acer"] = 19000
+			laptop_prices["Apple"] = 50000
+			laptop_prices["Lenovo"] = 25000
 
-		fmt.Println(laptop_prices)
+			fmt.Println(laptop_prices)
 
-		numbers := []int{1, 2, 3, 4}
+			numbers := []int{1, 2, 3, 4}
 
-		for index, item := range numbers {
-			fmt.Println(index, ": ", item)
-		}
+			for index, item := range numbers {
+				fmt.Println(index, ": ", item)
+			}
 
-		for key, value := range laptop_prices {
-			fmt.Println(key, ": ", value)
-		}
+			for key, value := range laptop_prices {
+				fmt.Println(key, ": ", value)
+			}
+
+
+		// structure
+
+		//person1_tech := []string{"Python", "Golang"}
 	*/
-
-	// structure
-
-	//person1_tech := []string{"Python", "Golang"}
-
 	person1 := Info{
 		name: "Suman De",
 		age:  24,
